@@ -8,7 +8,7 @@ $( document ).ready(function() {
    // Meet Time Variables
    // -----------------------
    let meetDate = new Date('November 30, 2018 22:00:00');
-   let meetDd = meetDate.getDay();
+   let meetDd = meetDate.getDate();
    let meetMm = meetDate.getMonth();
    let meetHh = meetDate.getHours();
    let meetMins = meetDate.getMinutes();
@@ -33,24 +33,27 @@ $( document ).ready(function() {
       }
       // -----------------------
 
-      console.log("Date Value: " + dd);
-      // console.log("Month Value: " + mm);
-      // console.log("Hours Value: " + hh );
+      // console.log("---------");
+      // console.log("Current Date Value: " + dd);
+      // console.log("Current Month Value: " + mm);
+      // console.log("Current Hours Value: " + hh );
       // console.log("Year Value: " + YYYY);
       // console.log("Minutes Value:" + mins);
       // console.log("Seconds Value: " + ss);
       // console.log(today);
       
       // console.log(meetDate);
-      console.log(meetDd);
-      // console.log(meetMm);
-      // console.log(meetHh);
+      // console.log("Meet Date Value: " + meetDd);
+      // console.log("Meet Month Value: " + meetMm);
+      // console.log("Meet Hour Value: " + meetHh);
       // console.log(meetMins);
       // console.log(meetSs);
+      // console.log("---------");
       
       $("#current-time-value").text(monthNames[mm] +  " " + dd + ", " + YYYY + ": " +  hh + ":" + mins + ":" + ss);
 
-      $("#time-left-value").text((dd-meetDd) + "Days")
+      $("#time-left-value").text((meetDd - dd) + " Days " + (meetHh-hh) + " Hours ");
+      
 
       setTimeout(startTime, 1000);
 
