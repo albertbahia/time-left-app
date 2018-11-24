@@ -52,8 +52,9 @@ $( document ).ready(function() {
       
       $("#current-time-value").text(monthNames[mm] +  " " + dd + ", " + YYYY + ": " +  hh + ":" + mins + ":" + ss);
 
-      $("#time-left-value").text((meetDd - dd) + " Days " + (meetHh-hh) + " Hours ");
+      $("#time-left-value").text((meetDd - dd) + " Days " + (24-hh-meetHh) + " Hours " + (60-mins) + " Minutes " + (60-ss) + " Seconds ");
       
+
 
       setTimeout(startTime, 1000);
 
