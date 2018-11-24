@@ -52,7 +52,7 @@ $( document ).ready(function() {
       
       $("#current-time-value").text(monthNames[mm] +  " " + dd + ", " + YYYY + ": " +  hh + ":" + mins + ":" + ss);
 
-      $("#time-left-value").text((meetDd - dd) + " Days " + (24-hh-meetHh) + " Hours " + (60-mins) + " Minutes " + (60-ss) + " Seconds ");
+      $("#time-left-value").text((meetDd - dd) + " Days " + (hh-meetHh) + " Hours " + (60-mins) + " Minutes " + (60-ss) + " Seconds ");
       
 
 
