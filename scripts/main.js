@@ -1,3 +1,4 @@
 $( document ).ready(function() {
-   $("#time-left-value").append("hello");
+   let text = "hello";
+   $("#time-left-value").append(text);
 });
