@@ -50,7 +50,7 @@ $( document ).ready(function() {
       // console.log(meetSs);
       // console.log("---------");
       
-      $("#current-time-value").text(monthNames[mm] +  " " + dd + ", " + YYYY + ": " +  hh + ":" + mins + ":" + ss);
+      $("#current-time-value").text(monthNames[mm] +  " " + dd + ", " + YYYY + " - " +  hh + ":" + mins + ":" + ss);
 
       $("#time-left-value").text((meetDd - dd) + " Days " + (hh-meetHh) + " Hours " + (60-mins) + " Minutes " + (60-ss) + " Seconds ");
       
