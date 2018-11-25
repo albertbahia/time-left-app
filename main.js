@@ -17,7 +17,14 @@ $( document ).ready(function() {
    let startedDd = startedDate.getDate();
    let startedDdName = startedDate.getDay();
    let startedMm = startedDate.getMonth();
+   let twelveHourFormatStarted;
    let startedHh = startedDate.getHours();
+   if (startedHh > 12) {
+      startedHh = startedHh - 12;
+      twelveHourFormatStarted = "PM";
+   } else if (startedHh <= 12) {
+      twelveHourFormatStarted = "AM";
+   }
    let startedYear = startedDate.getFullYear();
    let startedMins = startedDate.getMinutes();
    let startedSs = startedDate.getSeconds();
@@ -99,7 +106,7 @@ $( document ).ready(function() {
       seconds %= 60;
       // -----------------------
 
-      $("#started-talking-time-value").text(dayNames[startedDdName] + " " + monthNames[startedMm] + " " + startedDd + ", " + startedYear + " - " + startedHh + ":" + startedMins + ":" + startedSs);
+      $("#started-talking-time-value").text(dayNames[startedDdName] + " " + monthNames[startedMm] + " " + startedDd + ", " + startedYear + " - " + startedHh + ":" + startedMins + ":" + startedSs + " " + twelveHourFormatStarted);
 
       $("#meet-time-value").text(dayNames[meetDdName] + " " + monthNames[meetMm] + " " + meetDd + ", " + meetYear + " - " + meetHh + ":" + meetMins + ":" + meetSs);
       
