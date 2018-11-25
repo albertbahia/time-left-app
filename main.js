@@ -85,13 +85,27 @@ $( document ).ready(function() {
       // console.log(meetSs);
       // console.log("---------");
 
+      // -----------------------
+      // Time Difference Calculations
+      // -----------------------
+      let difference = meetDate.getTime() - today.getTime();
+      let seconds = Math.floor(difference / 1000);
+      let minutes = Math.floor(seconds / 60);
+      let hours = Math.floor(minutes / 60);
+      let days = Math.floor(hours / 24);
+
+      hours %= 24;
+      minutes %= 60;
+      seconds %= 60;
+      // -----------------------
+
       $("#started-talking-time-value").text(dayNames[startedDdName] + " " + monthNames[startedMm] + " " + startedDd + ", " + startedYear + " - " + startedHh + ":" + startedMins + ":" + startedSs);
 
       $("#meet-time-value").text(dayNames[meetDdName] + " " + monthNames[meetMm] + " " + meetDd + ", " + meetYear + " - " + meetHh + ":" + meetMins + ":" + meetSs);
       
       $("#current-time-value").text(dayNames[ddName] + " " + monthNames[mm] +  " " + dd + ", " + YYYY + " - " +  hh + ":" + mins + ":" + ss);
 
-      $("#time-left-value").text((meetDd - dd) + " Days " + (hh-meetHh) + " Hours " + (60-mins) + " Minutes " + (60-ss) + " Seconds ");
+      $("#time-left-value").text(days + " Days " + hours + " Hours " + minutes + " Minutes " + seconds + " Seconds ");
       
 
       // Restart timer
