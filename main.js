@@ -25,6 +25,7 @@ $( document ).ready(function() {
       // -----------------------
       let today = new Date();
       let dd = today.getDate();
+      let ddName = today.getDay();
       let mm = today.getMonth();
       let hh = today.getHours()
       let YYYY = today.getFullYear();
@@ -52,7 +53,7 @@ $( document ).ready(function() {
       // console.log(meetSs);
       // console.log("---------");
       
-      $("#current-time-value").text(monthNames[mm] +  " " + dd + ", " + YYYY + " - " +  hh + ":" + mins + ":" + ss);
+      $("#current-time-value").text(dayNames[ddName] + " " + monthNames[mm] +  " " + dd + ", " + YYYY + " - " +  hh + ":" + mins + ":" + ss);
 
       $("#time-left-value").text((meetDd - dd) + " Days " + (hh-meetHh) + " Hours " + (60-mins) + " Minutes " + (60-ss) + " Seconds ");
       
