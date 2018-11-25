@@ -144,6 +144,9 @@ $( document ).ready(function() {
       $("#time-left-value").text(days + " Days " + hours + " Hours " + minutes + " Minutes " + seconds + " Seconds ");
 
       $("#days").text(days);
+      $("#hours").text(hours);
+      $("#minutes").text(minutes);
+      $("#seconds").text(seconds);
       
 
       // Restart timer
