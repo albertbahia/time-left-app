@@ -50,7 +50,7 @@ $( document ).ready(function() {
    let meetMm = meetDate.getMonth();
    let meetHh = meetDate.getHours();
    // -----------------------
-   // 12-hour clock format for Started Talking Time 
+   // 12-hour clock format for Next Time To Meet 
    // TODO:  Needs to be refactored with the other timestamp values so only one function does this.
    // -----------------------
    let twelveHourFormatMeet;
@@ -80,7 +80,19 @@ $( document ).ready(function() {
       let dd = today.getDate();
       let ddName = today.getDay();
       let mm = today.getMonth();
-      let hh = today.getHours()
+      let hh = today.getHours();
+      // -----------------------
+      // 12-hour clock format for Current Time
+      // TODO:  Needs to be refactored with the other timestamp values so only one function does this.
+      // -----------------------
+      let twelveHourFormatCurrent;
+      if (hh > 12) {
+         hh = hh - 12;
+         twelveHourFormatCurrent = "PM";
+      } else if (hh <= 12) {
+         twelveHourFormatCurrent = "AM";
+      }
+      // -----------------------
       let YYYY = today.getFullYear();
       let mins = today.getMinutes();
       let ss = today.getSeconds();
@@ -127,7 +139,7 @@ $( document ).ready(function() {
 
       $("#meet-time-value").text(dayNames[meetDdName] + " " + monthNames[meetMm] + " " + meetDd + ", " + meetYear + " - " + meetHh + ":" + meetMins + ":" + meetSs + " " + twelveHourFormatMeet);
       
-      $("#current-time-value").text(dayNames[ddName] + " " + monthNames[mm] +  " " + dd + ", " + YYYY + " - " +  hh + ":" + mins + ":" + ss);
+      $("#current-time-value").text(dayNames[ddName] + " " + monthNames[mm] +  " " + dd + ", " + YYYY + " - " +  hh + ":" + mins + ":" + ss + " " + twelveHourFormatCurrent);
 
       $("#time-left-value").text(days + " Days " + hours + " Hours " + minutes + " Minutes " + seconds + " Seconds ");
       
