@@ -55,11 +55,12 @@ $( document ).ready(function() {
       $("#time-left-value").text((meetDd - dd) + " Days " + (hh-meetHh) + " Hours " + (60-mins) + " Minutes " + (60-ss) + " Seconds ");
       
 
-
+      // Restart timer
       setTimeout(startTime, 1000);
 
    };
 
+   // Invoke function
    startTime();
    
 });
