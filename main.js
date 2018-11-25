@@ -17,8 +17,6 @@ $( document ).ready(function() {
    let meetSs = meetDate.getSeconds();
    // -----------------------
 
-   $("#meet-time-value").text(meetDate);
-
    function startTime() {
       // -----------------------
       // Start Time Variables
@@ -52,6 +50,8 @@ $( document ).ready(function() {
       // console.log(meetMins);
       // console.log(meetSs);
       // console.log("---------");
+
+      $("#meet-time-value").text(meetDate);
       
       $("#current-time-value").text(dayNames[ddName] + " " + monthNames[mm] +  " " + dd + ", " + YYYY + " - " +  hh + ":" + mins + ":" + ss);
 
