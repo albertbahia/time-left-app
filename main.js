@@ -11,10 +11,18 @@ $( document ).ready(function() {
    // -----------------------
    let meetDate = new Date('November 30, 2018 22:00:00');
    let meetDd = meetDate.getDate();
+   let meetDdName = meetDate.getDay();
    let meetMm = meetDate.getMonth();
    let meetHh = meetDate.getHours();
+   let meetYear = meetDate.getFullYear();
    let meetMins = meetDate.getMinutes();
    let meetSs = meetDate.getSeconds();
+   if (meetMins < 10) {
+      meetMins = "0" + meetMins;
+   }
+   if (meetSs < 10) {
+      meetSs = "0" + meetSs;
+   }
    // -----------------------
 
    function startTime() {
@@ -29,6 +37,9 @@ $( document ).ready(function() {
       let YYYY = today.getFullYear();
       let mins = today.getMinutes();
       let ss = today.getSeconds();
+      if (mins < 10) {
+         mins = "0" + mins;
+      }
       if (ss < 10) {
          ss = "0" + ss;
       }
@@ -51,7 +62,7 @@ $( document ).ready(function() {
       // console.log(meetSs);
       // console.log("---------");
 
-      $("#meet-time-value").text(meetDate);
+      $("#meet-time-value").text(dayNames[meetDdName] + " " + monthNames[meetMm] + " " + meetDd + ", " + meetYear + " - " + meetHh + ":" + meetMins + ":" + meetSs);
       
       $("#current-time-value").text(dayNames[ddName] + " " + monthNames[mm] +  " " + dd + ", " + YYYY + " - " +  hh + ":" + mins + ":" + ss);
 
