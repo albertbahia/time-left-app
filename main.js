@@ -9,6 +9,25 @@ $( document ).ready(function() {
 
    const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
    // -----------------------
+
+   // -----------------------
+   // Started Talking Time Variables
+   // -----------------------
+   let startedDate = new Date('October 5, 2018 17:00:00'); //---Get the exact time from Amy
+   let startedDd = startedDate.getDate();
+   let startedDdName = startedDate.getDay();
+   let startedMm = startedDate.getMonth();
+   let startedHh = startedDate.getHours();
+   let startedYear = startedDate.getFullYear();
+   let startedMins = startedDate.getMinutes();
+   let startedSs = startedDate.getSeconds();
+   if (startedMins < 10) {
+      startedMins = "0" + startedMins;
+   }
+   if (startedSs < 10) {
+      startedSs = "0" + startedSs;
+   }
+   // 
    
    // -----------------------
    // Meet Time Variables
@@ -65,6 +84,8 @@ $( document ).ready(function() {
       // console.log(meetMins);
       // console.log(meetSs);
       // console.log("---------");
+
+      $("#started-talking-time-value").text(dayNames[startedDdName] + " " + monthNames[startedMm] + " " + startedDd + ", " + startedYear + " - " + startedHh + ":" + startedMins + ":" + startedSs);
 
       $("#meet-time-value").text(dayNames[meetDdName] + " " + monthNames[meetMm] + " " + meetDd + ", " + meetYear + " - " + meetHh + ":" + meetMins + ":" + meetSs);
       
