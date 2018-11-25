@@ -141,7 +141,7 @@ $( document ).ready(function() {
       
       $("#current-time-value").text(dayNames[ddName] + " " + monthNames[mm] +  " " + dd + ", " + YYYY + " - " +  hh + ":" + mins + ":" + ss + " " + twelveHourFormatCurrent);
 
-      $("#time-left-value").text(days + " Days " + hours + " Hours " + minutes + " Minutes " + seconds + " Seconds ");
+      // $("#time-left-value").text(days + " Days " + hours + " Hours " + minutes + " Minutes " + seconds + " Seconds ");
 
       $("#days").text(days);
       $("#hours").text(hours);
