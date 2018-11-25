@@ -17,14 +17,19 @@ $( document ).ready(function() {
    let startedDd = startedDate.getDate();
    let startedDdName = startedDate.getDay();
    let startedMm = startedDate.getMonth();
-   let twelveHourFormatStarted;
    let startedHh = startedDate.getHours();
+   // -----------------------
+   // 12-hour clock format for Started Talking Time 
+   // TODO:  Needs to be refactored with the other timestamp values so only one function does this.
+   // -----------------------
+   let twelveHourFormatStarted;
    if (startedHh > 12) {
       startedHh = startedHh - 12;
       twelveHourFormatStarted = "PM";
    } else if (startedHh <= 12) {
       twelveHourFormatStarted = "AM";
    }
+   // -----------------------
    let startedYear = startedDate.getFullYear();
    let startedMins = startedDate.getMinutes();
    let startedSs = startedDate.getSeconds();
@@ -44,6 +49,18 @@ $( document ).ready(function() {
    let meetDdName = meetDate.getDay();
    let meetMm = meetDate.getMonth();
    let meetHh = meetDate.getHours();
+   // -----------------------
+   // 12-hour clock format for Started Talking Time 
+   // TODO:  Needs to be refactored with the other timestamp values so only one function does this.
+   // -----------------------
+   let twelveHourFormatMeet;
+   if (meetHh > 12) {
+      meetHh = meetHh - 12;
+      twelveHourFormatMeet = "PM";
+   } else if (meetHh <= 12) {
+      twelveHourFormatMeet = "AM";
+   }
+   // -----------------------
    let meetYear = meetDate.getFullYear();
    let meetMins = meetDate.getMinutes();
    let meetSs = meetDate.getSeconds();
@@ -108,7 +125,7 @@ $( document ).ready(function() {
 
       $("#started-talking-time-value").text(dayNames[startedDdName] + " " + monthNames[startedMm] + " " + startedDd + ", " + startedYear + " - " + startedHh + ":" + startedMins + ":" + startedSs + " " + twelveHourFormatStarted);
 
-      $("#meet-time-value").text(dayNames[meetDdName] + " " + monthNames[meetMm] + " " + meetDd + ", " + meetYear + " - " + meetHh + ":" + meetMins + ":" + meetSs);
+      $("#meet-time-value").text(dayNames[meetDdName] + " " + monthNames[meetMm] + " " + meetDd + ", " + meetYear + " - " + meetHh + ":" + meetMins + ":" + meetSs + " " + twelveHourFormatMeet);
       
       $("#current-time-value").text(dayNames[ddName] + " " + monthNames[mm] +  " " + dd + ", " + YYYY + " - " +  hh + ":" + mins + ":" + ss);
 
