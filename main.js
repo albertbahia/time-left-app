@@ -166,6 +166,20 @@ $( document ).ready(function() {
       seconds %= 60;
       // -----------------------
 
+      // -----------------------
+      // Officially Together Total Calculations
+      // -----------------------
+      let sum  = -1 * (officialDate.getTime() - today.getTime());
+      let secondsOfficial = Math.floor(sum / 1000);
+      let minutesOfficial = Math.floor(secondsOfficial / 60);
+      let hoursOfficial = Math.floor(minutesOfficial / 60);
+      let daysOfficial = Math.floor(hoursOfficial / 24);
+
+      hoursOfficial %= 24;
+      minutesOfficial %= 60;
+      secondsOfficial %= 60;
+      // -----------------------
+
       $("#officially-together-time-value").text(dayNames[officialDdName] + " " + monthNames[officialMm] + " " + officialDd + ", " + officialYear + " - " + officialHh + ":" + officialMins + ":" + officialSs + " " + twelveHourFormatOfficial);
 
       $("#started-talking-time-value").text(dayNames[startedDdName] + " " + monthNames[startedMm] + " " + startedDd + ", " + startedYear + " - " + startedHh + ":" + startedMins + ":" + startedSs + " " + twelveHourFormatStarted);
@@ -176,10 +190,23 @@ $( document ).ready(function() {
 
       // $("#time-left-value").text(days + " Days " + hours + " Hours " + minutes + " Minutes " + seconds + " Seconds ");
 
+      // -----------------------
+      // Display Next Time To Meet Calculations
+      // -----------------------
       $("#days").text(days);
       $("#hours").text(hours);
       $("#minutes").text(minutes);
       $("#seconds").text(seconds);
+      // -----------------------
+
+      // -----------------------
+      // Display Time Officially Together Calculations
+      // -----------------------
+      $("#days-official").text(daysOfficial);
+      $("#hours-official").text(hoursOfficial);
+      $("#minutes-official").text(minutesOfficial);
+      $("#seconds-official").text(secondsOfficial);
+      // -----------------------
       
 
       // Restart timer
