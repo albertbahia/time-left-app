@@ -39,7 +39,7 @@ $( document ).ready(function() {
    if (startedSs < 10) {
       startedSs = "0" + startedSs;
    }
-   // 
+   // -----------------------
    
    // -----------------------
    // Meet Time Variables
