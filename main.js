@@ -11,6 +11,37 @@ $( document ).ready(function() {
    // -----------------------
 
    // -----------------------
+   // Officially Together Time Variables
+   // -----------------------
+   let officialDate = new Date('November 11, 2018 01:00:00'); //---Get the exact time from Amy
+   let officialDd = officialDate.getDate();
+   let officialDdName = officialDate.getDay();
+   let officialMm = officialDate.getMonth();
+   let officialHh = officialDate.getHours();
+   // -----------------------
+   // 12-hour clock format for Officialy Together Time 
+   // TODO:  Needs to be refactored with the other timestamp values so only one function does this.
+   // -----------------------
+   let twelveHourFormatOfficial;
+   if (officialHh > 12) {
+      officialHh = officialHh - 12;
+      twelveHourFormatOfficial = "PM";
+   } else if (officialHh <= 12) {
+      twelveHourFormatOfficial = "AM";
+   }
+   // -----------------------
+   let officialYear = officialDate.getFullYear();
+   let officialMins = officialDate.getMinutes();
+   let officialSs = officialDate.getSeconds();
+   if (officialMins < 10) {
+      officialMins = "0" + officialMins;
+   }
+   if (officialSs < 10) {
+      officialSs = "0" + officialSs;
+   }
+   // -----------------------
+
+   // -----------------------
    // Started Talking Time Variables
    // -----------------------
    let startedDate = new Date('October 5, 2018 17:00:00'); //---Get the exact time from Amy
@@ -134,6 +165,8 @@ $( document ).ready(function() {
       minutes %= 60;
       seconds %= 60;
       // -----------------------
+
+      $("#officially-together-time-value").text(dayNames[officialDdName] + " " + monthNames[officialMm] + " " + officialDd + ", " + officialYear + " - " + officialHh + ":" + officialMins + ":" + officialSs + " " + twelveHourFormatOfficial);
 
       $("#started-talking-time-value").text(dayNames[startedDdName] + " " + monthNames[startedMm] + " " + startedDd + ", " + startedYear + " - " + startedHh + ":" + startedMins + ":" + startedSs + " " + twelveHourFormatStarted);
 
