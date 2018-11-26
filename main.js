@@ -169,18 +169,18 @@ $( document ).ready(function() {
       // -----------------------
       // Officially Together Total Calculations
       // -----------------------
-      let sum  = -1 * (officialDate.getTime() - today.getTime());
-      let secondsOfficial = Math.floor(sum / 1000);
-      let minutesOfficial = Math.floor(secondsOfficial / 60);
-      let hoursOfficial = Math.floor(minutesOfficial / 60);
-      let daysOfficial = Math.floor(hoursOfficial / 24);
+      let sum  = -1 * (startedDate.getTime() - today.getTime());
+      let secondsStarted = Math.floor(sum / 1000);
+      let minutesStarted = Math.floor(secondsStarted / 60);
+      let hoursStarted = Math.floor(minutesStarted / 60);
+      let daysStarted = Math.floor(hoursStarted / 24);
 
-      hoursOfficial %= 24;
-      minutesOfficial %= 60;
-      secondsOfficial %= 60;
+      hoursStarted %= 24;
+      minutesStarted %= 60;
+      secondsStarted %= 60;
       // -----------------------
 
-      $("#officially-together-time-value").text(dayNames[officialDdName] + " " + monthNames[officialMm] + " " + officialDd + ", " + officialYear + " - " + officialHh + ":" + officialMins + ":" + officialSs + " " + twelveHourFormatOfficial);
+      $("#officially-together-time-value").text(dayNames[startedDdName] + " " + monthNames[startedMm] + " " + startedDd + ", " + startedYear + " - " + startedHh + ":" + startedMins + ":" + startedSs + " " + twelveHourFormatStarted);
 
       $("#started-talking-time-value").text(dayNames[startedDdName] + " " + monthNames[startedMm] + " " + startedDd + ", " + startedYear + " - " + startedHh + ":" + startedMins + ":" + startedSs + " " + twelveHourFormatStarted);
 
@@ -202,10 +202,10 @@ $( document ).ready(function() {
       // -----------------------
       // Display Time Officially Together Calculations
       // -----------------------
-      $("#days-official").text(daysOfficial);
-      $("#hours-official").text(hoursOfficial);
-      $("#minutes-official").text(minutesOfficial);
-      $("#seconds-official").text(secondsOfficial);
+      $("#days-official").text(daysStarted);
+      $("#hours-official").text(hoursStarted);
+      $("#minutes-official").text(minutesStarted);
+      $("#seconds-official").text(secondsStarted);
       // -----------------------
       
 
