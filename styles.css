@@ -19,3 +19,11 @@
  #current-time-section {
    margin: 0px 0px 50px 0px
  }
+
+ #next-time-meet-section h3 {
+   display: -ms-inline-grid
+ }
+
+ #meet-time-value {
+   display: -ms-inline-grid
+ }
