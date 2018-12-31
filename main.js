@@ -23,10 +23,13 @@ $( document ).ready(function() {
    // TODO:  Needs to be refactored with the other timestamp values so only one function does this.
    // -----------------------
    let twelveHourFormatOfficial;
-   if (officialHh > 12) {
-      officialHh = officialHh - 12;
+   if (officialHh === 12) {
+      officialHh = officialHh - 0;
       twelveHourFormatOfficial = "PM";
-   } else if (officialHh <= 12) {
+   } else if (officialHh >= 12) {
+	 		officialHh = officialHh - 12;
+			twelveHourFormatOfficial = "PM";
+	 } else if (officialHh < 12) {
       twelveHourFormatOfficial = "AM";
    }
    // -----------------------
@@ -117,10 +120,13 @@ $( document ).ready(function() {
       // TODO:  Needs to be refactored with the other timestamp values so only one function does this.
       // -----------------------
       let twelveHourFormatCurrent;
-      if (hh > 12) {
+      if (hh === 12) {
+				hh = hh - 0;
+				twelveHourFormatCurrent = "PM";
+			} else if (hh >= 12) {
          hh = hh - 12;
          twelveHourFormatCurrent = "PM";
-      } else if (hh <= 12) {
+      } else if (hh < 12) {
          twelveHourFormatCurrent = "AM";
       }
       // -----------------------
