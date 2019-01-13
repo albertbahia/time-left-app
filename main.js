@@ -188,7 +188,7 @@ $( document ).ready(function() {
 
       $("#officially-together-time-value").text(dayNames[startedDdName] + " " + monthNames[startedMm] + " " + startedDd + ", " + startedYear + " - " + startedHh + ":" + startedMins + ":" + startedSs + " " + twelveHourFormatStarted);
 
-      $("#started-talking-time-value").text(dayNames[startedDdName] + " " + monthNames[startedMm] + " " + startedDd + ", " + startedYear + " - " + startedHh + ":" + startedMins + ":" + startedSs + " " + twelveHourFormatStarted);
+      $("#started-talking-time-value").text(dayNames[startedDdName] + " " + monthNames[startedMm] + " " + startedDd + ", " + startedYear);
 
       $("#meet-time-value").text(dayNames[meetDdName] + " " + monthNames[meetMm] + " " + meetDd + ", " + meetYear + " - " + meetHh + ":" + meetMins + ":" + meetSs + " " + twelveHourFormatMeet);
       
