@@ -27,3 +27,14 @@
  #meet-time-value {
    display: -ms-inline-grid
  }
+
+#started-talking-time-value {
+ 	display: inline-block;
+	font-weight: bold
+ }
+
+#official-title {
+	display: inline-block
+}
+
+
