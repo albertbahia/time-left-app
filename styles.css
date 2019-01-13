@@ -19,9 +19,10 @@
  #current-time-section {
    margin: 0px 0px 50px 0px
  }
-
- #next-time-meet-section h3 {
-   display: -ms-inline-grid
+ 
+ #next-meet-time-section {
+ 	display: inline-block;
+	font-weight: bold
  }
 
  #meet-time-value {
@@ -34,6 +35,10 @@
  }
 
 #official-title {
+	display: inline-block
+}
+
+#time-left-section {
 	display: inline-block
 }
 
