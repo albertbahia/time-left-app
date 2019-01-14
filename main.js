@@ -180,7 +180,9 @@ $( document ).ready(function() {
       let minutesStarted = Math.floor(secondsStarted / 60);
       let hoursStarted = Math.floor(minutesStarted / 60);
       let daysStarted = Math.floor(hoursStarted / 24);
-
+			let monthsStarted = Math.floor(daysStarted / 30);
+			
+			daysStarted %= 30;
       hoursStarted %= 24;
       minutesStarted %= 60;
       secondsStarted %= 60;
@@ -208,6 +210,7 @@ $( document ).ready(function() {
       // -----------------------
       // Display Time Officially Together Calculations
       // -----------------------
+			$("#months-official").text(monthsStarted);
       $("#days-official").text(daysStarted);
       $("#hours-official").text(hoursStarted);
       $("#minutes-official").text(minutesStarted);
