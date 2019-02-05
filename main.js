@@ -78,7 +78,7 @@ $( document ).ready(function() {
    // -----------------------
    // Meet Time Variables
    // -----------------------
-   let meetDate = new Date('February 1, 2019 22:34:00');
+   let meetDate = new Date('February 8, 2019 21:43:00');
    let meetDd = meetDate.getDate();
    let meetDdName = meetDate.getDay();
    let meetMm = meetDate.getMonth();
