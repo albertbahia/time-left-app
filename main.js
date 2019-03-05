@@ -1,6 +1,7 @@
 $( document ).ready(function() {
-
-   // -----------------------
+	 // ** Meet time timestamp is on Line 82**
+   
+	 // -----------------------
    // Constants
    // -----------------------
    const monthNames = ["January", "February", "March", "April", "May", "June",
@@ -78,7 +79,7 @@ $( document ).ready(function() {
    // -----------------------
    // Meet Time Variables
    // -----------------------
-   let meetDate = new Date('March 1, 2019 23:00:00');
+   let meetDate = new Date('March 9, 2019 00:12:00');
    let meetDd = meetDate.getDate();
    let meetDdName = meetDate.getDay();
    let meetMm = meetDate.getMonth();
